@@ -62,4 +62,26 @@ public class MergeSort {
             }
         }
     }
+
+    /**
+     * 自底向上
+     * @param arr
+     * @param <E>
+     */
+    public static <E extends Comparable<E>> void sortBU(E[] arr){
+        E[] temp = Arrays.copyOfRange(arr, 0, arr.length);
+        int n = arr.length;
+
+        //遍历合并的区间长度
+        for (int sz = 1; sz < n; sz+=sz) {
+            //遍历合并的两个区间的起始位置i
+            //合并[i, i + sz - 1] 和 [i + sz, i + sz + sz - 1]
+            for (int i = 0; i + sz < n; i+= sz+sz) {
+                if (arr[i + sz - 1].compareTo(arr[i + sz]) > 0){
+                    merge(arr, i, i + sz- 1, Math.min(i + sz + sz - 1, n - 1), temp);
+                }
+
+            }
+        }
+    }
 }
