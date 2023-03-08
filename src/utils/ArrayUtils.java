@@ -1,6 +1,7 @@
 package utils;
 
 import sort.InsertionSort;
+import sort.MergeSort;
 import sort.SelectionSort;
 
 import java.util.Random;
@@ -60,6 +61,8 @@ public class ArrayUtils {
             SelectionSort.sort(arr);
         }else if (sortName.equals("InsertionSort")){
             InsertionSort.sort(arr);
+        }else if (sortName.equals("MergeSort")){
+            MergeSort.sort(arr);
         }
 
         long endTime = System.nanoTime();
