@@ -6,6 +6,21 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
+        //sortTest();
+        segmentTreeTest();
+    }
+
+    //线段树测试
+    private static void segmentTreeTest() {
+        Integer[] nums = {-2, 0, 3, -5, 2, -1};
+
+        SegmentTree<Integer> segTree = new SegmentTree<>(nums, (a, b) -> a + b);
+        System.out.println(segTree);
+    }
+
+
+    // 排序测试
+    private static void sortTest() {
         BST<Integer> bst = new BST<>();
         //int[] nums = {5, 3, 6, 8, 4, 2};
         //for (int num : nums) {

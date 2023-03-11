@@ -1,9 +1,6 @@
 package utils;
 
-import sort.InsertionSort;
-import sort.MergeSort;
-import sort.QuickSort;
-import sort.SelectionSort;
+import sort.*;
 
 import java.util.Random;
 
@@ -66,6 +63,8 @@ public class ArrayUtils {
             MergeSort.sort(arr);
         } else if (sortName.equals("QuickSort")) {
             QuickSort.sort(arr);
+        }else if (sortName.equals("HeapSort")) {
+            HeapSort.sort(arr);
         }
 
         long endTime = System.nanoTime();

@@ -16,15 +16,17 @@ public class Main {
 //                new Student("CC", 66)};
 //        SelectionSort.sort(students);
 //        ArrayUtils.printArray(students);
-        int[] dataSize = {10000, 100000, 1000000, 10000000};
+        int[] dataSize = {10000, 100000, 1000000};
         for (int n : dataSize) {
             Integer[] randomArray = ArrayUtils.generateRandomArray(n, n);
             //Integer[] insert = Arrays.copyOfRange(randomArray, 0, randomArray.length);
             //Integer[] select = Arrays.copyOfRange(randomArray, 0, randomArray.length);
             Integer[] quick = Arrays.copyOfRange(randomArray, 0, randomArray.length);
+            Integer[] heap = Arrays.copyOfRange(randomArray, 0, randomArray.length);
 
             ArrayUtils.sortTest("MergeSort", randomArray);
             ArrayUtils.sortTest("QuickSort", quick);
+            ArrayUtils.sortTest("HeapSort", heap);
             //ArrayUtils.sortTest("InsertionSort", insert);
             //ArrayUtils.sortTest("SelectionSort", select);
         }
