@@ -1,33 +1,20 @@
 import basic.ArrayGenerator;
 import basic.LineSearch;
+import medium.LRUCache;
 
 public class Main {
     public static void main(String[] args) {
-        /*Integer[] data = {24, 18, 12, 9, 16, 66, 32, 4};
+        LRUCache lRUCache = new LRUCache(2);
+        lRUCache.put(1, 1); // 缓存是 {1=1}
+        lRUCache.put(2, 2); // 缓存是 {1=1, 2=2}
+        System.out.println(lRUCache.get(1));   // 返回 1
+        lRUCache.put(3, 3); // 该操作会使得关键字 2 作废，缓存是 {1=1, 3=3}
+        System.out.println(lRUCache.get(2));;    // 返回 -1 (未找到)
+        lRUCache.put(4, 4); // 该操作会使得关键字 1 作废，缓存是 {4=4, 3=3}
+        System.out.println(lRUCache.get(1));    // 返回 -1 (未找到)
+        System.out.println(lRUCache.get(3));    // 返回 3
+        System.out.println(lRUCache.get(4));    // 返回 4
 
-        int res = basic.LineSearch.search(data, 16);
-        System.out.println(res);
-
-        int res2 = basic.LineSearch.search(data, 666);
-        System.out.println(res2);
-
-        basic.Student[] students = {new basic.Student("Alice"), new basic.Student("Charles")};
-
-        basic.Student alice = new basic.Student("Alice");
-        System.out.println(basic.LineSearch.search(students, alice));*/
-
-        int[] dataSize = {100000, 1000000};
-        for (int n : dataSize) {
-            Integer[] arr = ArrayGenerator.generateOrderedArray(n);
-            long startTime = System.nanoTime();
-            for (int k = 0; k < 100; k++) {
-                LineSearch.search(arr, n);
-            }
-            long endTime = System.nanoTime();
-
-            double time = (endTime - startTime) / 1000000.0;
-            System.out.println("n = " + n + ", cost: " +time + "ms");
-        }
 
     }
 

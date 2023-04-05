@@ -6,11 +6,11 @@ import cc.potcover.ListNode;
  * JZ23 链表中环的入口结点
  */
 public class EntryNodeOfLoop {
-    public ListNode EntryNodeOfLoop(ListNode pHead) {
-        if (pHead == null) {
+    public ListNode EntryNodeOfLoop(ListNode head) {
+        if (head == null) {
             return null;
         }
-        ListNode slow = pHead, fast = pHead;
+        ListNode slow = head, fast = head;
 
         while (fast != null && fast.next != null) {
             slow = slow.next;
@@ -25,7 +25,7 @@ public class EntryNodeOfLoop {
             return null;
         }
 
-        fast = pHead;
+        fast = head;
 
         while (fast != slow) {
             fast = fast.next;
