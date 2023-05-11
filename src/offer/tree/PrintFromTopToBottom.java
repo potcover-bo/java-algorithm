@@ -1,4 +1,4 @@
-package cc.potcover.tree;
+package offer.tree;
 
 import offer.TreeNode;
 

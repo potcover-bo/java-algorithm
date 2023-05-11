@@ -1,7 +1,7 @@
 package hot100.medium;
 
-import cc.potcover.TreeNode;
-import linked_list.problem.ListNode;
+
+import hot100.TreeNode;
 
 public class ConvertBST {
 

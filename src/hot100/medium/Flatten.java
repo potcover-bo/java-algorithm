@@ -1,11 +1,11 @@
 package hot100.medium;
 
-import cc.potcover.TreeNode;
+
+import hot100.TreeNode;
 
 /**
  * 114. 二叉树展开为链表
  */
-//TODO 展开链表
 public class Flatten {
     public void flatten(TreeNode root) {
 

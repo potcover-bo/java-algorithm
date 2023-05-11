@@ -1,6 +1,7 @@
 package hot100.easy;
 
-import cc.potcover.TreeNode;
+
+import hot100.TreeNode;
 
 /**
  * 617

@@ -1,6 +1,7 @@
 package hot100.medium;
 
-import cc.potcover.TreeNode;
+
+import hot100.TreeNode;
 
 /**
  * 236. 二叉树的最近公共祖先

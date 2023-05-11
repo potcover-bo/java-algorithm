@@ -1,6 +1,7 @@
 package hot100.easy;
 
-import cc.potcover.TreeNode;
+
+import hot100.TreeNode;
 
 public class IsSymmetric {
     public boolean isSymmetric(TreeNode root) {

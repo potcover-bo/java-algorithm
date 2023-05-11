@@ -1,6 +1,7 @@
 package hot100.easy;
 
-import cc.potcover.TreeNode;
+
+import hot100.TreeNode;
 
 /**
  * 给定一个二叉树，找出其最大深度。
